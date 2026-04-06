@@ -1,0 +1,63 @@
+<template>
+    <div class="module-header">
+        <div class="module-tag">Position</div>
+        <div class="module-title">Position</div>
+        <div class="module-desc">La propiedad <code>position</code> controla cómo se ubica un elemento en la página y si
+            ocupa espacio en el flujo normal del documento.</div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Los 5 valores de position</div>
+        <div class="demo-area">
+            <div class="demo-controls">
+                <div class="ctrl-label">Selecciona un valor:</div>
+                <div class="btn-group" id="positionBtns">
+                    <button class="ctrl-btn sel" data-position="static">static</button>
+                    <button class="ctrl-btn" data-position="relative">relative</button>
+                    <button class="ctrl-btn" data-position="absolute">absolute</button>
+                    <button class="ctrl-btn" data-position="fixed">fixed *</button>
+                    <button class="ctrl-btn" data-position="sticky">sticky</button>
+                </div>
+            </div>
+            <div class="demo-preview" id="posPreview" style="min-height:160px;overflow:hidden;position:relative;"></div>
+        </div>
+        <div class="code-block" id="posCode"></div>
+        <div class="info-box" id="posDesc"></div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Cuándo usar cada uno</div>
+        <div class="concept-grid">
+            <div class="concept-card">
+                <div class="label">static</div>
+                <div class="desc">Valor por defecto. Flujo normal. No acepta top/left.</div>
+            </div>
+            <div class="concept-card">
+                <div class="label">relative</div>
+                <div class="desc">Se mueve respecto a su posición original. El hueco se mantiene.</div>
+            </div>
+            <div class="concept-card">
+                <div class="label">absolute</div>
+                <div class="desc">Sale del flujo. Se posiciona respecto al ancestro con position ≠ static.</div>
+            </div>
+            <div class="concept-card">
+                <div class="label">fixed</div>
+                <div class="desc">Respecto al viewport. Permanece fijo al hacer scroll.</div>
+            </div>
+            <div class="concept-card">
+                <div class="label">sticky</div>
+                <div class="desc">Flujo normal hasta que alcanza un punto del scroll, donde se "pega".</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tip-box">
+        <p>💡 <strong>La clave de absolute:</strong> El padre debe tener <code>position: relative</code>. De lo
+            contrario, el elemento se posiciona respecto al <code>&lt;body&gt;</code>.</p>
+    </div>
+
+    <div class="nav-footer">
+        <button data-prev="2">← Anterior</button>
+        <button class="primary" data-next="4">Siguiente: Flexbox →</button>
+    </div>
+</template>

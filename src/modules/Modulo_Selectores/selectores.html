@@ -1,0 +1,65 @@
+<template>
+
+    <div class="module-header">
+        <div class="module-tag">Selectores</div>
+        <div class="module-title">Selectores CSS</div>
+        <div class="module-desc">Los selectores determinan a qué elementos HTML se les aplica un estilo. Son la base del
+            CSS.</div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Tipos de selectores — demo interactiva</div>
+        <div class="demo-area">
+            <div class="demo-controls">
+                <div class="ctrl-label">Selecciona un tipo de selector:</div>
+                <div class="btn-group" id="selectorBtns">
+                    <button class="ctrl-btn sel" data-selector="elem">elemento</button>
+                    <button class="ctrl-btn" data-selector="clase">.clase</button>
+                    <button class="ctrl-btn" data-selector="id">#id</button>
+                    <button class="ctrl-btn" data-selector="desc">descendiente</button>
+                    <button class="ctrl-btn" data-selector="hijo">hijo directo &gt;</button>
+                    <button class="ctrl-btn" data-selector="hover">:hover</button>
+                    <button class="ctrl-btn" data-selector="before">::before</button>
+                    <button class="ctrl-btn" data-selector="after">::after</button>
+                </div>
+            </div>
+            <div class="demo-preview" id="selPreview"></div>
+        </div>
+        <div class="code-block" id="selCode"></div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Orden de especificidad</div>
+        <div class="specificity-row">
+            <div class="spec-item">
+                <div class="spec-badge coral">elemento</div>
+                <div class="spec-pts">1 punto</div>
+            </div>
+            <span class="arrow">→</span>
+            <div class="spec-item">
+                <div class="spec-badge teal">.clase</div>
+                <div class="spec-pts">10 puntos</div>
+            </div>
+            <span class="arrow">→</span>
+            <div class="spec-item">
+                <div class="spec-badge blue">#id</div>
+                <div class="spec-pts">100 puntos</div>
+            </div>
+            <span class="arrow">→</span>
+            <div class="spec-item">
+                <div class="spec-badge amber">inline</div>
+                <div class="spec-pts">1000 puntos</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tip-box">
+        <p>💡 <strong>Tip:</strong> Evita usar IDs para CSS. Úsalos solo para JavaScript. Así la especificidad se
+            mantiene baja y tu CSS es más fácil de mantener.</p>
+    </div>
+
+    <div class="nav-footer">
+        <button data-prev="0">← Anterior</button>
+        <button class="primary" data-next="2">Siguiente: Box Model →</button>
+    </div>
+</template>

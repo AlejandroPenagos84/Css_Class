@@ -1,0 +1,32 @@
+/* =============================================
+   ESPECIFICIDAD (módulo 2)
+   ============================================= */
+.specificity-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.spec-item { text-align: center; }
+
+.spec-badge {
+  border-radius: 6px;
+  padding: 8px 14px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.spec-badge.coral { background: #FAECE7; color: #993C1D; }
+.spec-badge.teal  { background: #E1F5EE; color: #085041; }
+.spec-badge.blue  { background: #E6F1FB; color: #185FA5; }
+.spec-badge.amber { background: #FAEEDA; color: #854F0B; }
+
+.spec-pts {
+  font-size: 12px;
+  color: #888;
+  margin-top: 4px;
+}
+
+.arrow { font-size: 18px; color: #aaa; }

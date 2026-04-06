@@ -1,0 +1,89 @@
+<template>
+    <div class="module-header">
+        <div class="module-tag">¿Qué es CSS?</div>
+        <div class="module-title">¿Qué es CSS y cómo funciona?</div>
+        <div class="module-desc">CSS (Cascading Style Sheets) es el lenguaje que le da estilo al HTML. HTML define
+            la estructura; CSS define cómo se ve.</div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Las 3 formas de aplicar CSS</div>
+        <div class="concept-grid">
+            <div class="concept-card">
+                <div class="label">🔴 Inline</div>
+                <div class="desc">Directamente con el atributo <code>style=""</code>. Difícil de mantener.</div>
+            </div>
+            <div class="concept-card">
+                <div class="label">🟡 Interno &lt;style&gt;</div>
+                <div class="desc">Dentro de <code>&lt;style&gt;</code> en el <code>&lt;head&gt;</code>. Útil para
+                    páginas pequeñas.</div>
+            </div>
+            <div class="concept-card">
+                <div class="label">🟢 Externo .css</div>
+                <div class="desc">Archivo separado vinculado con <code>&lt;link&gt;</code>. La forma correcta en
+                    proyectos reales.</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">La anatomía de una regla CSS</div>
+        <div class="code-block"><span class="hl-selector">h1</span> {
+            <span class="hl-prop">color</span>: <span class="hl-val">tomato</span>;
+            <span class="hl-prop">font-size</span>: <span class="hl-val">32px</span>;
+            }
+            <span class="hl-comment">/* selector { propiedad: valor; } */</span>
+        </div>
+        <div class="explain-row">
+            <div class="num">1</div>
+            <div class="text"><strong>Selector</strong>: A quién le aplica el estilo (<code>h1</code>,
+                <code>.clase</code>, <code>#id</code>)
+            </div>
+        </div>
+        <div class="explain-row">
+            <div class="num">2</div>
+            <div class="text"><strong>Propiedad</strong>: Qué aspecto se modifica (<code>color</code>,
+                <code>font-size</code>, <code>margin</code>)
+            </div>
+        </div>
+        <div class="explain-row">
+            <div class="num">3</div>
+            <div class="text"><strong>Valor</strong>: Cómo se modifica ese aspecto (<code>tomato</code>,
+                <code>32px</code>, <code>center</code>)
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">La cascada y la especificidad</div>
+        <div class="concept-grid">
+            <div class="concept-card">
+                <div class="label">Cascada</div>
+                <div class="desc">Si dos reglas aplican al mismo elemento, gana la que venga
+                    <strong>después</strong> en el archivo.
+                </div>
+            </div>
+            <div class="concept-card">
+                <div class="label">Especificidad</div>
+                <div class="desc"><span class="pill pill-coral">#id</span> gana a <span
+                        class="pill pill-teal">.clase</span> que gana a <span class="pill pill-blue">elemento</span>.
+                </div>
+            </div>
+            <div class="concept-card">
+                <div class="label">Herencia</div>
+                <div class="desc">Propiedades como <code>color</code> y <code>font-family</code> se heredan del
+                    padre al hijo automáticamente.</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tip-box">
+        <p>💡 <strong>Regla de oro:</strong> Siempre usa archivos externos <code>.css</code>. El CSS inline es
+            difícil de mantener y no se puede reutilizar.</p>
+    </div>
+
+    <div class="nav-footer">
+        <button disabled>← Anterior</button>
+        <button class="primary" data-next="1">Siguiente: Selectores →</button>
+    </div>
+</template>

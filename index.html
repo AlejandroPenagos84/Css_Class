@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guía CSS Interactiva</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@simonwep/pickr@1.8.0/dist/themes/nano.min.css">
+</head>
+
+<body>
+
+  <div class="guide">
+
+    <div class="guide-header">
+      <h1>Guía CSS Interactiva</h1>
+      <p>Aprende CSS desde lo más básico hasta Grid — con demos en vivo para cada concepto.</p>
+    </div>
+
+    <!-- Navegación entre módulos -->
+    <nav class="nav" id="mainNav">
+      <button class="nav-btn active" data-target="0">¿Qué es CSS?</button>
+      <button class="nav-btn" data-target="1">Selectores</button>
+      <button class="nav-btn" data-target="2">Valores y Unidades</button>
+      <button class="nav-btn" data-target="3">Box Model</button>
+      <button class="nav-btn" data-target="4">Position</button>
+      <button class="nav-btn" data-target="5">Flexbox</button>
+      <button class="nav-btn" data-target="6">Grid</button>
+    </nav>
+
+    <!-- ¿Qué es CSS? -->
+    <div class="module visible">
+      <intro-css></intro-css>
+    </div>
+
+    <!-- Selectores -->
+    <div class="module">
+      <selectores-css></selectores-css>
+    </div>
+
+      <!-- Unidades -->
+    <div class="module">
+      <unidades-css></unidades-css>
+    </div>
+
+    <!-- Box Model -->
+    <div class="module">
+      <box-model-css></box-model-css>
+    </div>
+
+    <!-- Position -->
+    <div class="module">
+      <position-css></position-css>
+    </div>
+
+    <!-- Flexbox -->
+    <div class="module">
+      <flexbox-css></flexbox-css>
+    </div>
+
+    <!-- Grid -->
+    <div class="module">
+      <grid-css></grid-css>
+    </div>
+
+    <!-- ES Modules: cada archivo tiene una responsabilidad clara -->
+    <script type="module" src="/src/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@simonwep/pickr@1.8.0/dist/pickr.min.js"></script>
+</body>
+
+</html>

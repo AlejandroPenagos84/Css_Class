@@ -1,0 +1,86 @@
+<template>
+    <div class="module-header">
+        <div class="module-tag">Box Model</div>
+        <div class="module-title">El modelo de caja (Box Model)</div>
+        <div class="module-desc">Todo elemento HTML es una caja rectangular. El Box Model define cómo se calcula el
+            espacio que ocupa.</div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Las 4 capas de la caja</div>
+        <div class="demo-area">
+            <div class="demo-preview" style="display:flex;justify-content:center;">
+                <div class="bm-margin"><span class="bm-label" style="color:#854F0B;">margin</span>
+                    <div class="bm-border"><span class="bm-label" style="color:#993C1D;">border</span>
+                        <div class="bm-padding"><span class="bm-label" style="color:#085041;">padding</span>
+                            <div class="bm-content">content</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="concept-grid">
+            <div class="concept-card">
+                <div class="label" style="color:#854F0B;">margin</div>
+                <div class="desc">Espacio <strong>fuera</strong> del elemento. Separa elementos entre sí.</div>
+            </div>
+            <div class="concept-card">
+                <div class="label" style="color:#993C1D;">border</div>
+                <div class="desc">El borde del elemento. Tiene grosor, estilo y color.</div>
+            </div>
+            <div class="concept-card">
+                <div class="label" style="color:#085041;">padding</div>
+                <div class="desc">Espacio <strong>dentro</strong> del elemento, entre el borde y el contenido.</div>
+            </div>
+            <div class="concept-card">
+                <div class="label" style="color:#0C447C;">content</div>
+                <div class="desc">El contenido real: texto, imagen, etc.</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">El problema de box-sizing</div>
+        <div class="code-block"><span class="hl-comment">/* SIN border-box: width:200px + padding:20px = 240px → confuso
+                */</span>
+
+            <span class="hl-comment">/* CON border-box: el padding va DENTRO del width = siempre 200px ✓ */</span>
+
+            <span class="hl-selector">*</span> {
+            <span class="hl-prop">box-sizing</span>: <span class="hl-val">border-box</span>; <span class="hl-comment">/*
+                ponlo siempre globalmente */</span>
+            }
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Demo interactiva</div>
+        <div class="demo-area">
+            <div class="demo-controls">
+                <div class="sliders-grid">
+                    <div class="slider-row"><label>padding: <span id="padVal">16px</span></label><input type="range"
+                            id="padRange" min="0" max="40" value="16" step="4"></div>
+                    <div class="slider-row"><label>margin: <span id="marVal">12px</span></label><input type="range"
+                            id="marRange" min="0" max="40" value="12" step="4"></div>
+                    <div class="slider-row"><label>border: <span id="borVal">2px</span></label><input type="range"
+                            id="borRange" min="0" max="10" value="2" step="1"></div>
+                    <div class="slider-row"><label>border-radius: <span id="radVal">6px</span></label><input
+                            type="range" id="radRange" min="0" max="50" value="6" step="2"></div>
+                </div>
+            </div>
+            <div class="demo-preview" style="display:flex;align-items:center;justify-content:center;min-height:120px;">
+                <div id="boxDemo">¡Soy una caja!</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tip-box">
+        <p>💡 Pon siempre <code>* { box-sizing: border-box; }</code> al inicio de tu CSS. Es el estándar de la
+            industria.</p>
+    </div>
+
+    <div class="nav-footer">
+        <button data-prev="1">← Anterior</button>
+        <button class="primary" data-next="3">Siguiente: Position →</button>
+    </div>
+</template>

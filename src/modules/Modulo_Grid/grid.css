@@ -1,0 +1,16 @@
+/* =============================================
+   GRID DEMO (módulo 6)
+   ============================================= */
+.grid-demo-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 8px;
+}
+
+.grid-item {
+  border-radius: 6px;
+  padding: 14px;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: center;
+}

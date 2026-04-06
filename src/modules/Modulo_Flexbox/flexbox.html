@@ -1,0 +1,88 @@
+<template>
+    <div class="module-header">
+        <div class="module-tag">Flexbox</div>
+        <div class="module-title">Flexbox</div>
+        <div class="module-desc">Sistema de layout unidimensional. Distribuye elementos en fila o columna. Perfecto para
+            navbars, cards y centrado.</div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Contenedor vs hijos</div>
+        <div class="concept-grid">
+            <div class="concept-card">
+                <div class="label" style="color:#185FA5;">Propiedades del contenedor</div>
+                <div class="desc"><code>display: flex</code>, <code>flex-direction</code>, <code>justify-content</code>,
+                    <code>align-items</code>, <code>flex-wrap</code>, <code>gap</code></div>
+            </div>
+            <div class="concept-card">
+                <div class="label" style="color:#0F6E56;">Propiedades de los hijos</div>
+                <div class="desc"><code>flex-grow</code>, <code>flex-shrink</code>, <code>flex-basis</code>,
+                    <code>align-self</code>, <code>order</code></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Demo interactiva de Flexbox</div>
+        <div class="demo-area">
+            <div class="demo-controls">
+                <div class="controls-grid">
+                    <div>
+                        <div class="ctrl-label">flex-direction</div>
+                        <div class="btn-group" data-flex-prop="dir">
+                            <button class="ctrl-btn sel" data-value="row">row</button>
+                            <button class="ctrl-btn" data-value="column">column</button>
+                            <button class="ctrl-btn" data-value="row-reverse">row-reverse</button>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="ctrl-label">justify-content</div>
+                        <div class="btn-group" data-flex-prop="jc">
+                            <button class="ctrl-btn sel" data-value="flex-start">flex-start</button>
+                            <button class="ctrl-btn" data-value="center">center</button>
+                            <button class="ctrl-btn" data-value="flex-end">flex-end</button>
+                            <button class="ctrl-btn" data-value="space-between">space-between</button>
+                            <button class="ctrl-btn" data-value="space-around">space-around</button>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="ctrl-label">align-items</div>
+                        <div class="btn-group" data-flex-prop="ai">
+                            <button class="ctrl-btn sel" data-value="stretch">stretch</button>
+                            <button class="ctrl-btn" data-value="flex-start">flex-start</button>
+                            <button class="ctrl-btn" data-value="center">center</button>
+                            <button class="ctrl-btn" data-value="flex-end">flex-end</button>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="ctrl-label">flex-wrap</div>
+                        <div class="btn-group" data-flex-prop="wrap">
+                            <button class="ctrl-btn sel" data-value="nowrap">nowrap</button>
+                            <button class="ctrl-btn" data-value="wrap">wrap</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="demo-preview" style="padding:12px;">
+                <div id="flexContainer" class="flex-demo-container">
+                    <div class="flex-item teal">A</div>
+                    <div class="flex-item blue">B</div>
+                    <div class="flex-item amber">C</div>
+                    <div class="flex-item coral">D</div>
+                </div>
+            </div>
+        </div>
+        <div class="code-block" id="flexCode"></div>
+    </div>
+
+    <div class="tip-box">
+        <p>💡 <strong>Centrado perfecto:</strong>
+            <code>display: flex; justify-content: center; align-items: center;</code> centra cualquier cosa horizontal y
+            verticalmente.</p>
+    </div>
+
+    <div class="nav-footer">
+        <button data-prev="3">← Anterior</button>
+        <button class="primary" data-next="5">Siguiente: Grid →</button>
+    </div>
+</template>

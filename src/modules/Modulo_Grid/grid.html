@@ -1,0 +1,101 @@
+<template>
+    <div class="module-header">
+        <div class="module-tag">Grid</div>
+        <div class="module-title">CSS Grid</div>
+        <div class="module-desc">Sistema de layout bidimensional. Trabaja con filas Y columnas al mismo tiempo. Perfecto
+            para layouts de página completa.</div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Flex vs Grid</div>
+        <div class="concept-grid">
+            <div class="concept-card">
+                <div class="label" style="color:#185FA5;">Flexbox</div>
+                <div class="desc">Una dirección (fila o columna). Navbars, botones, listas.</div>
+            </div>
+            <div class="concept-card">
+                <div class="label" style="color:#0F6E56;">Grid</div>
+                <div class="desc">Dos dimensiones (filas y columnas). Galerías, layouts de página.</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Demo interactiva de Grid</div>
+        <div class="demo-area">
+            <div class="demo-controls">
+                <div class="controls-grid">
+                    <div>
+                        <div class="ctrl-label">grid-template-columns</div>
+                        <div class="btn-group" data-grid-prop="cols">
+                            <button class="ctrl-btn sel" data-value="1fr 1fr 1fr">1fr 1fr 1fr</button>
+                            <button class="ctrl-btn" data-value="1fr 1fr">1fr 1fr</button>
+                            <button class="ctrl-btn" data-value="2fr 1fr">2fr 1fr</button>
+                            <button class="ctrl-btn" data-value="repeat(4, 1fr)">repeat(4,1fr)</button>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="ctrl-label">gap</div>
+                        <div class="btn-group" data-grid-prop="gap">
+                            <button class="ctrl-btn sel" data-value="8px">8px</button>
+                            <button class="ctrl-btn" data-value="16px">16px</button>
+                            <button class="ctrl-btn" data-value="24px">24px</button>
+                            <button class="ctrl-btn" data-value="0px">0px</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="demo-preview" style="padding:12px;">
+                <div id="gridContainer" class="grid-demo-container">
+                    <div class="grid-item teal">1</div>
+                    <div class="grid-item blue">2</div>
+                    <div class="grid-item amber">3</div>
+                    <div class="grid-item coral">4</div>
+                    <div class="grid-item purple">5</div>
+                    <div class="grid-item green">6</div>
+                </div>
+            </div>
+        </div>
+        <div class="code-block" id="gridCode"></div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">grid-template-areas — layout semántico</div>
+        <div class="code-block"><span class="hl-selector">.layout</span> {
+            <span class="hl-prop">display</span>: <span class="hl-val">grid</span>;
+            <span class="hl-prop">grid-template-areas</span>:
+            <span class="hl-val">"header header"</span>
+            <span class="hl-val">"sidebar main"</span>
+            <span class="hl-val">"footer footer"</span>;
+            <span class="hl-prop">grid-template-columns</span>: <span class="hl-val">200px 1fr</span>;
+            }
+
+            <span class="hl-selector">header</span> { <span class="hl-prop">grid-area</span>: <span
+                class="hl-val">header</span>; }
+            <span class="hl-selector">aside</span> { <span class="hl-prop">grid-area</span>: <span
+                class="hl-val">sidebar</span>; }
+            <span class="hl-selector">main</span> { <span class="hl-prop">grid-area</span>: <span
+                class="hl-val">main</span>; }
+            <span class="hl-selector">footer</span> { <span class="hl-prop">grid-area</span>: <span
+                class="hl-val">footer</span>; }
+        </div>
+    </div>
+
+    <div class="tip-box">
+        <p>💡 La unidad <code>fr</code> (fracción) es la clave de Grid. <code>1fr 1fr 1fr</code> crea 3 columnas
+            iguales. <code>2fr 1fr</code> hace que la primera sea el doble de ancha.</p>
+    </div>
+
+    <div class="success-box">
+        <div class="success-title">¡Módulos completados!</div>
+        <div class="success-desc">El siguiente paso es la landing page integradora donde usaremos Flexbox para el
+            navbar, Grid para las cards y Position para elementos decorativos.</div>
+    </div>
+
+    <div class="nav-footer">
+        <button data-prev="4">← Anterior</button>
+        <button class="primary" disabled>Landing Page (próximamente)</button>
+    </div>
+    </div>
+
+</template>

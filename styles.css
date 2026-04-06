@@ -1,0 +1,357 @@
+@import url("./src/modules/Modulo_Intro_CSS/intro.css");
+@import url("./src/modules/Modulo_Selectores/selectores.css");
+@import url("./src/modules/Modulo_Box_Model/box-model.css");
+@import url("./src/modules/Modulo_Flexbox/flexbox.css");
+@import url("./src/modules/Modulo_Grid/grid.css");
+
+
+/* =============================================
+   RESET & BASE
+   ============================================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background: #f5f5f0;
+  color: #1a1a1a;
+  padding: 2rem 1rem;
+}
+
+code {
+  background: #f0f0f0;
+  padding: 1px 6px;
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 13px;
+  color: #c0392b;
+}
+
+/* =============================================
+   LAYOUT PRINCIPAL
+   ============================================= */
+.guide {
+  max-width: 860px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+}
+
+.guide-header {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+.guide-header h1 {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.guide-header p {
+  font-size: 15px;
+  color: #666;
+}
+
+/* =============================================
+   NAVEGACIÓN
+   ============================================= */
+.nav {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.nav-btn {
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  background: transparent;
+  color: #555;
+  transition: all 0.15s;
+}
+
+.nav-btn:hover { background: #f5f5f5; }
+
+.nav-btn.active {
+  background: #1D9E75;
+  color: #fff;
+  border-color: #1D9E75;
+}
+
+/* =============================================
+   MÓDULOS
+   ============================================= */
+.module { display: none; }
+.module.visible { display: block; }
+
+.module-header { margin-bottom: 1.5rem; }
+
+.module-tag {
+  font-size: 12px;
+  font-weight: 600;
+  color: #1D9E75;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.module-title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.module-desc {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* =============================================
+   SECCIONES
+   ============================================= */
+.section { margin-bottom: 2rem; }
+
+.section-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #eee;
+}
+
+/* =============================================
+   TARJETAS DE CONCEPTO
+   ============================================= */
+.concept-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+.concept-card {
+  background: #f9f9f7;
+  border-radius: 10px;
+  padding: 14px 16px;
+  border: 1px solid #eee;
+}
+
+.concept-card .label {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.concept-card .desc {
+  font-size: 13px;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* =============================================
+   ÁREA DE DEMO
+   ============================================= */
+.demo-area {
+  border: 1px solid #eee;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.demo-controls {
+  padding: 14px 16px;
+  background: #f9f9f7;
+  border-bottom: 1px solid #eee;
+}
+
+.ctrl-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.demo-preview {
+  padding: 20px;
+  min-height: 140px;
+  position: relative;
+}
+
+/* =============================================
+   BOTONES DE CONTROL
+   ============================================= */
+.btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.ctrl-btn {
+  padding: 5px 12px;
+  font-size: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  background: white;
+  color: #1a1a1a;
+  font-family: monospace;
+  transition: all 0.15s;
+}
+
+.ctrl-btn:hover { background: #f5f5f5; }
+
+.ctrl-btn.sel,
+.ctrl-btn.unit {
+  background: #1D9E75;
+  color: #fff;
+  border-color: #1D9E75;
+}
+
+.controls-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+/* =============================================
+   BLOQUE DE CÓDIGO
+   ============================================= */
+.code-block {
+  background: #1e1e2e;
+  border-radius: 8px;
+  padding: 14px 16px;
+  font-family: monospace;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #cdd6f4;
+  white-space: pre-wrap;
+  margin-bottom: 1rem;
+}
+
+.hl-selector { color: #89dceb; }
+.hl-prop     { color: #89b4fa; }
+.hl-val      { color: #a6e3a1; }
+.hl-comment  { color: #6c7086; }
+
+/* =============================================
+   CAJAS DE INFO
+   ============================================= */
+.tip-box {
+  background: #E1F5EE;
+  border-radius: 8px;
+  padding: 12px 16px;
+  border-left: 3px solid #1D9E75;
+  margin-bottom: 1rem;
+}
+
+.tip-box p {
+  font-size: 13px;
+  color: #085041;
+  line-height: 1.6;
+}
+
+.info-box {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+  padding: 12px 16px;
+  background: #f9f9f7;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.success-box {
+  background: #E1F5EE;
+  border-radius: 10px;
+  padding: 16px;
+  border: 1px solid #5DCAA5;
+  margin-bottom: 1rem;
+}
+
+.success-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #085041;
+  margin-bottom: 6px;
+}
+
+.success-desc {
+  font-size: 14px;
+  color: #0F6E56;
+  line-height: 1.6;
+}
+
+/* =============================================
+   NAVEGACIÓN FOOTER
+   ============================================= */
+.nav-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
+}
+
+.nav-footer button {
+  padding: 8px 18px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  background: white;
+  color: #1a1a1a;
+  transition: all 0.15s;
+}
+
+.nav-footer button:hover { background: #f5f5f5; }
+
+.nav-footer button.primary {
+  background: #1D9E75;
+  color: #fff;
+  border-color: #1D9E75;
+}
+
+.nav-footer button.primary:hover { background: #0F6E56; }
+.nav-footer button:disabled { opacity: 0.3; cursor: default; }
+
+
+/* =============================================
+   COLORES COMPARTIDOS (flex y grid items)
+   ============================================= */
+.teal   { background: #9FE1CB; color: #085041; }
+.blue   { background: #B5D4F4; color: #0C447C; }
+.amber  { background: #FAC775; color: #412402; }
+.coral  { background: #F0997B; color: #4A1B0C; }
+.purple { background: #CECBF6; color: #3C3489; }
+.green  { background: #C0DD97; color: #3B6D11; }
+
+
+.color-container {
+  margin: 1rem 0 2rem;
+  padding: 14px 16px;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  background: #f9f9f7;
+}
+
+#mi-color {
+  display: inline-block;
+  min-height: 40px;
+}
+
+.color-container .pcr-app {
+  position: static !important;
+  box-shadow: none !important;
+  margin-top: 8px;
+}

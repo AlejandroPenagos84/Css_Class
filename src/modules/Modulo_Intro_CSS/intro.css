@@ -1,0 +1,44 @@
+/* =============================================
+   FILAS DE EXPLICACIÓN (módulo 1)
+   ============================================= */
+.explain-row {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.explain-row .num {
+  min-width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #1D9E75;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.explain-row .text {
+  font-size: 14px;
+  line-height: 1.5;
+  padding-top: 3px;
+}
+
+/* =============================================
+   PILLS (módulo 1)
+   ============================================= */
+.pill {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.pill-teal  { background: #E1F5EE; color: #0F6E56; }
+.pill-blue  { background: #E6F1FB; color: #185FA5; }
+.pill-coral { background: #FAECE7; color: #993C1D; }
