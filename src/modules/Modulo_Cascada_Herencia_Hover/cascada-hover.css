@@ -1,0 +1,62 @@
+/* =============================================
+   CASCADA, ESPECIFICIDAD, HERENCIA Y HOVER
+   ============================================= */
+.hover-demo-wrap {
+  display: grid;
+  gap: 14px;
+  max-width: 480px;
+}
+
+.hover-demo-btn {
+  justify-self: start;
+  border: none;
+  border-radius: 8px;
+  background: #1d9e75;
+  color: #fff;
+  padding: 10px 14px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: transform 0.18s ease, background-color 0.18s ease;
+}
+
+.hover-demo-btn:hover {
+  background: #0f6e56;
+  transform: translateY(-2px);
+}
+
+.hover-demo-link {
+  color: #1d9e75;
+  font-weight: 600;
+  text-decoration: none;
+  width: fit-content;
+}
+
+.hover-demo-link:hover {
+  color: #185fa5;
+  text-decoration: underline;
+}
+
+.hover-demo-card {
+  border: 1px solid #dfe3e8;
+  background: #f9f9f7;
+  border-radius: 10px;
+  padding: 12px;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.hover-demo-card h4 {
+  margin: 0 0 6px;
+  font-size: 14px;
+}
+
+.hover-demo-card p {
+  margin: 0;
+  color: #555;
+  font-size: 13px;
+}
+
+.hover-demo-card:hover {
+  border-color: #5dcaa5;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  transform: translateY(-3px);
+}

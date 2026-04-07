@@ -1,0 +1,66 @@
+<template>
+  <div class="module-header">
+    <div class="module-tag">Cascada y Hover</div>
+    <div class="module-title">Cascada, Especificidad, Herencia y :hover</div>
+    <div class="module-desc">
+      Este modulo responde la pregunta mas comun de CSS: cuando dos reglas chocan, cual gana y por que.
+      Tambien veras como cambian estilos en interaccion usando el estado <code>:hover</code>.
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Regla ganadora (demo interactiva)</div>
+    <div class="demo-area">
+      <div class="demo-controls">
+        <div class="ctrl-label">Selecciona un conflicto:</div>
+        <div class="btn-group" id="cascadeBtns">
+          <button class="ctrl-btn sel" data-case="orden">Orden en cascada</button>
+          <button class="ctrl-btn" data-case="especificidad">Especificidad</button>
+          <button class="ctrl-btn" data-case="herencia">Herencia</button>
+        </div>
+      </div>
+      <div class="demo-preview" id="cascadePreview"></div>
+    </div>
+    <div class="code-block" id="cascadeCode"></div>
+    <div class="info-box" id="cascadeExplain"></div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Estado :hover (interaccion visual)</div>
+    <div class="demo-area">
+      <div class="demo-preview">
+        <div class="hover-demo-wrap">
+          <button class="hover-demo-btn">Pasa el mouse</button>
+          <a href="#" class="hover-demo-link">Enlace con hover</a>
+          <div class="hover-demo-card">
+            <h4>Card interactiva</h4>
+            <p>El borde, sombra y desplazamiento cambian en hover.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="code-block">.hover-demo-btn:hover {
+  background: #0f6e56;
+  transform: translateY(-2px);
+}
+
+.hover-demo-link:hover {
+  color: #185fa5;
+  text-decoration: underline;
+}
+
+.hover-demo-card:hover {
+  border-color: #5dcaa5;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}</div>
+  </div>
+
+  <div class="tip-box">
+    <p>
+      <strong>Regla mental rapida:</strong> primero mira importancia (<code>!important</code>),
+      luego especificidad, y si empatan, gana la regla escrita mas abajo.
+      En propiedades heredables (como <code>color</code>), el hijo toma el valor del padre si no define uno propio.
+    </p>
+  </div>
+
+</template>

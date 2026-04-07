@@ -12,6 +12,9 @@ import './modules/Modulo_Box_Model/box-model.js'
 import './modules/Modulo_Position/position.js'
 import './modules/Modulo_Flexbox/flexbox.js'
 import './modules/Modulo_Grid/grid.js'
+import './modules/Modulo_Cascada_Herencia_Hover/cascada-hover.js'
+import './modules/Modulo_Retos/reto.js'
+import './components/footer-module.js'
 import { initNavegacion } from './modules/navegacion.js'
 
 // Esperar a que el DOM esté listo

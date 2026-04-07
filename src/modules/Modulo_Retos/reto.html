@@ -1,0 +1,32 @@
+<template>
+    <div class="module-header">
+        <div class="module-tag">Retos</div>
+        <div class="module-title" id="retoTitulo"></div>
+        <div class="module-desc" id="retoDescripcion"></div>
+    </div>
+
+    <div class="tip-box">
+        <p><strong>Objetivo:</strong> <span id="retoInstruccion"></span></p>
+    </div>
+
+    <div class="section">
+        <div class="section-title">HTML fijo del reto</div>
+        <div id="baseHtmlCode" class="code-block"></div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Preview en vivo</div>
+        <div class="demo-area">
+            <div class="demo-preview" id="challengePreview"></div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Tu CSS (editable)</div>
+        <div id="editor" style="height: 300px; width: 100%; border: 1px solid #eee; border-radius: 8px;"></div>
+        <div style="margin-top: 10px; display: flex; gap: 8px; align-items: center;">
+            <button id="btnEvaluar" class="ctrl-btn">Evaluar reto</button>
+            <span id="resultadoReto" style="font-size: 13px; color: #555;"></span>
+        </div>
+    </div>
+</template>

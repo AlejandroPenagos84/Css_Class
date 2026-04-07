@@ -7,26 +7,32 @@
 let moduloActual = 0
 let modules = []
 let navButtons = []
+let listenersReady = false
 
 export function initNavegacion() {
   modules = Array.from(document.querySelectorAll('.module'))
   navButtons = Array.from(document.querySelectorAll('.nav-btn'))
 
-  // Botones del nav superior
-  navButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const destino = parseInt(btn.dataset.target)
-      irA(destino)
-    })
-  })
+  if (listenersReady) return
+  listenersReady = true
 
-  // Botones "Siguiente" y "Anterior" del footer de cada módulo
-  document.querySelectorAll('[data-next]').forEach(btn => {
-    btn.addEventListener('click', () => irA(parseInt(btn.dataset.next)))
-  })
+  document.addEventListener('click', event => {
+    const btn = event.target.closest('button')
+    if (!btn || btn.disabled) return
 
-  document.querySelectorAll('[data-prev]').forEach(btn => {
-    btn.addEventListener('click', () => irA(parseInt(btn.dataset.prev)))
+    if (btn.dataset.target !== undefined) {
+      irA(parseInt(btn.dataset.target, 10))
+      return
+    }
+
+    if (btn.dataset.next !== undefined) {
+      irA(parseInt(btn.dataset.next, 10))
+      return
+    }
+
+    if (btn.dataset.prev !== undefined) {
+      irA(parseInt(btn.dataset.prev, 10))
+    }
   })
 }
 
