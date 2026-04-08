@@ -58,6 +58,7 @@ async function initReto(root, reto) {
     if (!reto) return
 
     root._currentReto = reto
+    setLayoutMode(root, reto.id)
 
     fillStaticInfo(root, reto)
     let editor = root._editor || null
@@ -120,6 +121,11 @@ function fillStaticInfo(root, reto) {
     if (baseHtmlCode) baseHtmlCode.textContent = reto.htmlBase
 }
 
+function setLayoutMode(root, retoId) {
+    const useStackedLayout = /^grid-|^flex-/.test(retoId || '')
+    root.setAttribute('data-layout', useStackedLayout ? 'stacked' : 'split')
+}
+
 async function initEditor(root, initialCss) {
     const container = root.querySelector('#editor')
     if (!container) return null
@@ -138,20 +144,27 @@ async function initEditor(root, initialCss) {
 }
 
 function applyPreviewCss(preview, htmlBase, cssText) {
-        let frame = preview.querySelector('iframe[data-reto-preview="true"]')
+    let frame = preview.querySelector('iframe[data-reto-preview="true"]')
 
-        if (!frame) {
-                frame = document.createElement('iframe')
-                frame.setAttribute('data-reto-preview', 'true')
-                frame.setAttribute('title', 'Preview del reto CSS')
-                frame.style.width = '100%'
-                frame.style.minHeight = '220px'
-                frame.style.border = '0'
-                preview.innerHTML = ''
-                preview.appendChild(frame)
-        }
+    if (!frame) {
+        frame = document.createElement('iframe')
+        frame.setAttribute('data-reto-preview', 'true')
+        frame.setAttribute('title', 'Preview del reto CSS')
+        frame.setAttribute('scrolling', 'no')
+        frame.style.width = '100%'
+        frame.style.minHeight = '280px'
+        frame.style.height = '280px'
+        frame.style.border = '0'
+        preview.innerHTML = ''
+        preview.appendChild(frame)
+    }
 
-        frame.srcdoc = `<!doctype html>
+    frame.onload = () => {
+        resizePreviewFrame(frame)
+        setTimeout(() => resizePreviewFrame(frame), 40)
+    }
+
+    frame.srcdoc = `<!doctype html>
 <html lang="es">
     <head>
         <meta charset="UTF-8" />
@@ -171,6 +184,23 @@ function applyPreviewCss(preview, htmlBase, cssText) {
         ${htmlBase}
     </body>
 </html>`
+}
+
+function resizePreviewFrame(frame) {
+    const doc = frame.contentDocument
+    if (!doc) return
+
+    const host = frame.closest('reto-css')
+    const isStackedLayout = host?.getAttribute('data-layout') === 'stacked'
+
+    const bodyHeight = doc.body ? doc.body.scrollHeight : 0
+    const htmlHeight = doc.documentElement ? doc.documentElement.scrollHeight : 0
+    const contentHeight = Math.max(bodyHeight, htmlHeight)
+
+    const targetHeight = isStackedLayout
+        ? Math.max(520, contentHeight + 8)
+        : Math.max(280, Math.min(contentHeight + 8, 960))
+    frame.style.height = `${targetHeight}px`
 }
 
 function validarReto(cssText, reglas) {

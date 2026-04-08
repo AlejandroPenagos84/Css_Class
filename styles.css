@@ -36,7 +36,7 @@ code {
    LAYOUT PRINCIPAL
    ============================================= */
 .guide {
-  max-width: 860px;
+  max-width: 980px;
   margin: 0 auto;
   background: white;
   border-radius: 16px;
@@ -356,4 +356,53 @@ code {
   position: static !important;
   box-shadow: none !important;
   margin-top: 8px;
+}
+
+.container-retos {
+  display: grid;
+  grid-template-columns: minmax(320px, 0.95fr) minmax(440px, 1.35fr);
+  gap: 16px;
+  align-items: start;
+}
+
+.container-retos .section {
+  margin-bottom: 2rem;
+}
+
+reto-css[data-layout="stacked"] .container-retos {
+  grid-template-columns: 1fr;
+}
+
+reto-css[data-layout="stacked"] #challengePreview {
+  min-height: 520px;
+}
+
+reto-css[data-layout="stacked"] #challengePreview iframe[data-reto-preview="true"] {
+  min-height: 520px;
+}
+
+#challengePreview {
+  min-height: 440px;
+}
+
+#challengePreview iframe[data-reto-preview="true"] {
+  min-height: 440px;
+}
+
+
+@media (max-width: 900px) {
+  .guide {
+    max-width: 940px;
+    padding: 1.5rem;
+  }
+
+  .container-retos {
+    grid-template-columns: 1fr;
+  }
+
+  reto-css {
+    height: auto;
+    overflow: visible;
+    padding-right: 0;
+  }
 }
