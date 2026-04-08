@@ -12,13 +12,50 @@
             <div class="concept-card">
                 <div class="label" style="color:#185FA5;">Propiedades del contenedor</div>
                 <div class="desc"><code>display: flex</code>, <code>flex-direction</code>, <code>justify-content</code>,
-                    <code>align-items</code>, <code>flex-wrap</code>, <code>gap</code></div>
+                    <code>align-items</code>, <code>flex-wrap</code>, <code>gap</code>
+                </div>
             </div>
             <div class="concept-card">
                 <div class="label" style="color:#0F6E56;">Propiedades de los hijos</div>
                 <div class="desc"><code>flex-grow</code>, <code>flex-shrink</code>, <code>flex-basis</code>,
-                    <code>align-self</code>, <code>order</code></div>
+                    <code>align-self</code>, <code>order</code>
+                </div>
             </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Propiedades clave de tamaño en Flexbox</div>
+        <div class="concept-grid">
+            <div class="concept-card">
+                <div class="label" style="color:#185FA5;">flex-grow</div>
+                <div class="desc">Define cuánto puede crecer un item cuando sobra espacio en el contenedor. Ejemplo:
+                    <code>flex-grow: 1</code>.</div>
+            </div>
+            <div class="concept-card">
+                <div class="label" style="color:#0F6E56;">flex-shrink</div>
+                <div class="desc">Controla cuánto puede encogerse un item cuando falta espacio. Con
+                    <code>flex-shrink: 0</code> mantienes su ancho sin compresión.</div>
+            </div>
+            <div class="concept-card">
+                <div class="label" style="color:#7B4B00;">flex-basis</div>
+                <div class="desc">Es el tamaño base inicial antes de crecer o encoger. Ejemplo:
+                    <code>flex-basis: 220px</code>.</div>
+            </div>
+            <div class="concept-card">
+                <div class="label" style="color:#5A2A83;">Shorthand: flex</div>
+                <div class="desc"><code>flex: grow shrink basis</code>. Ejemplos: <code>flex: 1</code> (crece para
+                    ocupar espacio) y <code>flex: 0 0 220px</code> (ancho fijo de 220px).</div>
+            </div>
+        </div>
+        <div class="code-block"><span class="hl-selector">.item-a</span> {
+            <span class="hl-prop">flex-grow</span>: <span class="hl-val">1</span>;
+            <span class="hl-prop">flex-shrink</span>: <span class="hl-val">1</span>;
+            <span class="hl-prop">flex-basis</span>: <span class="hl-val">0%</span>;
+            }
+
+            <span class="hl-selector">.item-b</span> { <span class="hl-prop">flex</span>: <span class="hl-val">0 0 220px</span>; }
+            <span class="hl-comment">/* grow shrink basis */</span>
         </div>
     </div>
 
@@ -78,7 +115,8 @@
     <div class="tip-box">
         <p>💡 <strong>Centrado perfecto:</strong>
             <code>display: flex; justify-content: center; align-items: center;</code> centra cualquier cosa horizontal y
-            verticalmente.</p>
+            verticalmente.
+        </p>
     </div>
 
 </template>

@@ -1,0 +1,46 @@
+/* =============================================
+   DISPLAY DEMO (modulo display)
+   ============================================= */
+.display-preview-area {
+  display: grid;
+  gap: 16px;
+}
+
+.display-layout-demo {
+  display: block;
+  border: 2px dashed #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  background: #f9f9f7;
+}
+
+.display-card {
+  border-radius: 6px;
+  padding: 10px 14px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.display-card + .display-card {
+  margin-top: 8px;
+}
+
+.display-inline-demo {
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 12px;
+  background: #fff;
+  min-height: 56px;
+}
+
+.display-inline-demo .chip {
+  background: #e1f5ee;
+  border: 1px solid #5dcaa5;
+  color: #0f6e56;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+.display-inline-demo .chip + .chip {
+  margin-left: 8px;
+}

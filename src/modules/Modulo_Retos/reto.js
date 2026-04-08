@@ -3,6 +3,7 @@ import {
     retosSelectores,
     retosUnidades,
     retosBoxModel,
+    retosDisplay,
     retosFlexbox,
     retosGrid,
     retosPosition,
@@ -16,6 +17,7 @@ const allRetos = [
     ...retosSelectores,
     ...retosUnidades,
     ...retosBoxModel,
+    ...retosDisplay,
     ...retosPosition,
     ...retosFlexbox,
     ...retosGrid,
@@ -136,7 +138,39 @@ async function initEditor(root, initialCss) {
 }
 
 function applyPreviewCss(preview, htmlBase, cssText) {
-    preview.innerHTML = `<style>${cssText}</style>${htmlBase}`
+        let frame = preview.querySelector('iframe[data-reto-preview="true"]')
+
+        if (!frame) {
+                frame = document.createElement('iframe')
+                frame.setAttribute('data-reto-preview', 'true')
+                frame.setAttribute('title', 'Preview del reto CSS')
+                frame.style.width = '100%'
+                frame.style.minHeight = '220px'
+                frame.style.border = '0'
+                preview.innerHTML = ''
+                preview.appendChild(frame)
+        }
+
+        frame.srcdoc = `<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <style>
+            html, body {
+                margin: 0;
+                padding: 12px;
+                font-family: system-ui, -apple-system, sans-serif;
+                background: #fff;
+                color: #1a1a1a;
+            }
+            ${cssText}
+        </style>
+    </head>
+    <body>
+        ${htmlBase}
+    </body>
+</html>`
 }
 
 function validarReto(cssText, reglas) {

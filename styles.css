@@ -1,6 +1,7 @@
 @import url("./src/modules/Modulo_Intro_CSS/intro.css");
 @import url("./src/modules/Modulo_Selectores/selectores.css");
 @import url("./src/modules/Modulo_Box_Model/box-model.css");
+@import url("./src/modules/Modulo_Display/display.css");
 @import url("./src/modules/Modulo_Flexbox/flexbox.css");
 @import url("./src/modules/Modulo_Grid/grid.css");
 @import url("./src/modules/Modulo_Cascada_Herencia_Hover/cascada-hover.css");

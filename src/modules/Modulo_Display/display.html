@@ -1,0 +1,71 @@
+<template>
+    <div class="module-header">
+        <div class="module-tag">Display</div>
+        <div class="module-title">Display: block, inline, flex y grid</div>
+        <div class="module-desc">Aqui trabajamos <code>display</code>. Ojo: <code>static</code> pertenece a <code>position</code>, no a <code>display</code>.</div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Mapa rapido</div>
+        <div class="concept-grid">
+            <div class="concept-card">
+                <div class="label" style="color:#185FA5;">block</div>
+                <div class="desc">Ocupa todo el ancho disponible y salta de linea.</div>
+            </div>
+            <div class="concept-card">
+                <div class="label" style="color:#0F6E56;">inline / inline-block</div>
+                <div class="desc">Inline no respeta width/height. Inline-block si los respeta.</div>
+            </div>
+            <div class="concept-card">
+                <div class="label" style="color:#7B4B00;">flex / grid</div>
+                <div class="desc">Convierten al contenedor en sistema de layout 1D (flex) o 2D (grid).</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Demo interactiva de display</div>
+        <div class="demo-area">
+            <div class="demo-controls">
+                <div class="controls-grid">
+                    <div>
+                        <div class="ctrl-label">display del contenedor</div>
+                        <div class="btn-group" data-display-prop="layout">
+                            <button class="ctrl-btn sel" data-value="block">block</button>
+                            <button class="ctrl-btn" data-value="flex">flex</button>
+                            <button class="ctrl-btn" data-value="grid">grid</button>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="ctrl-label">display de los elementos .chip</div>
+                        <div class="btn-group" data-display-prop="chip">
+                            <button class="ctrl-btn sel" data-value="inline">inline</button>
+                            <button class="ctrl-btn" data-value="inline-block">inline-block</button>
+                            <button class="ctrl-btn" data-value="block">block</button>
+                            <button class="ctrl-btn" data-value="none">none</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="demo-preview display-preview-area">
+                <div id="displayLayout" class="display-layout-demo">
+                    <div class="display-card teal">Tarjeta A</div>
+                    <div class="display-card blue">Tarjeta B</div>
+                    <div class="display-card amber">Tarjeta C</div>
+                </div>
+
+                <div id="displayInlineDemo" class="display-inline-demo">
+                    <span class="chip">Inicio</span>
+                    <span class="chip">Cursos</span>
+                    <span class="chip">Reto</span>
+                </div>
+            </div>
+        </div>
+        <div class="code-block" id="displayCode"></div>
+    </div>
+
+    <div class="tip-box">
+        <p><strong>Tip:</strong> usa <code>display: none</code> para ocultar completamente un elemento. Si quieres mantener su espacio visual, usa <code>visibility: hidden</code>.</p>
+    </div>
+</template>

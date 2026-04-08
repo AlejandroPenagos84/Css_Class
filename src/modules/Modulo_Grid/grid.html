@@ -21,6 +21,39 @@
     </div>
 
     <div class="section">
+        <div class="section-title">Propiedades clave de Grid</div>
+        <div class="concept-grid">
+            <div class="concept-card">
+                <div class="label" style="color:#185FA5;">grid-template-columns</div>
+                <div class="desc">Define cuantas columnas tiene la grilla y como se reparten. Ejemplo:
+                    <code>grid-template-columns: repeat(4, 1fr)</code>.</div>
+            </div>
+            <div class="concept-card">
+                <div class="label" style="color:#0F6E56;">grid-auto-rows</div>
+                <div class="desc">Define la altura de las filas que Grid crea automaticamente cuando no estan escritas en la plantilla.</div>
+            </div>
+            <div class="concept-card">
+                <div class="label" style="color:#7B4B00;">grid-column / grid-row</div>
+                <div class="desc">Controlan el espacio que ocupa un item en columnas y filas. Con <code>span 2</code> un item ocupa dos espacios.</div>
+            </div>
+            <div class="concept-card">
+                <div class="label" style="color:#5A2A83;">grid-template-areas / grid-area</div>
+                <div class="desc">Permiten nombrar zonas del layout y asignar cada bloque con una palabra clara y semantica.</div>
+            </div>
+        </div>
+        <div class="code-block"><span class="hl-selector">.grid</span> {
+  <span class="hl-prop">display</span>: <span class="hl-val">grid</span>;
+  <span class="hl-prop">grid-template-columns</span>: <span class="hl-val">repeat(4, 1fr)</span>;
+  <span class="hl-prop">grid-auto-rows</span>: <span class="hl-val">160px</span>;
+}
+
+<span class="hl-selector">.item-grande</span> {
+  <span class="hl-prop">grid-column</span>: <span class="hl-val">span 2</span>;
+  <span class="hl-prop">grid-row</span>: <span class="hl-val">span 2</span>;
+}</div>
+    </div>
+
+    <div class="section">
         <div class="section-title">Demo interactiva de Grid</div>
         <div class="demo-area">
             <div class="demo-controls">

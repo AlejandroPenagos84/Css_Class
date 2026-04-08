@@ -151,6 +151,35 @@ export const retosUnidades = [
       { selector: '.hero-texto', propiedad: 'width', valor: '50%' },
       { selector: '.hero-texto', propiedad: 'color', valor: 'white' }
     ]
+  },
+
+  // ── DIFÍCIL ────────────────────────────────────────────────
+  {
+    id: 'uni-dvh-movil-dificil',
+    titulo: 'Reto: Hero mobile con 100dvh',
+    descripcion:
+      'Usa unidades dinamicas para que el alto visible del hero se adapte mejor en moviles.',
+    instruccion:
+      'Dale a .hero-mobile min-height: 100dvh. Mantén display: flex, align-items: center y justify-content: center.',
+    htmlBase: `<section class="hero-mobile">
+  <h2>Contenido centrado</h2>
+</section>`,
+    cssBase: `.hero-mobile {
+  background: linear-gradient(180deg, #0c447c, #1d9e75);
+  color: white;
+  text-align: center;
+  /* escribe aquí */
+}
+
+.hero-mobile h2 {
+  font-size: 2rem;
+}`,
+    reglas: [
+      { selector: '.hero-mobile', propiedad: 'min-height', valor: '100dvh' },
+      { selector: '.hero-mobile', propiedad: 'display', valor: 'flex' },
+      { selector: '.hero-mobile', propiedad: 'align-items', valor: 'center' },
+      { selector: '.hero-mobile', propiedad: 'justify-content', valor: 'center' }
+    ]
   }
 ]
 
@@ -238,6 +267,136 @@ export const retosBoxModel = [
     reglas: [
       { selector: '.contenedor', propiedad: 'overflow', valor: 'hidden' },
       { selector: '.parrafo', propiedad: 'margin', valor: '24px 0' }
+    ]
+  }
+]
+
+// ============================================================
+
+export const retosDisplay = [
+  // ── FÁCIL ──────────────────────────────────────────────────
+  {
+    id: 'dis-layout-static-basico',
+    titulo: 'Reto: Flujo normal con display block',
+    descripcion:
+      'Usa display block para mantener el flujo normal del documento, con cajas una debajo de otra.',
+    instruccion: 'Dale a .layout display: block.',
+    htmlBase: `<div class="layout">
+  <div class="item">Caja 1</div>
+  <div class="item">Caja 2</div>
+  <div class="item">Caja 3</div>
+</div>`,
+    cssBase: `.layout {
+  border: 2px dashed #adb5bd;
+  padding: 10px;
+  /* escribe aquí */
+}
+
+.item {
+  background: #e7f5ff;
+  border: 1px solid #74c0fc;
+  padding: 10px;
+}`,
+    reglas: [{ selector: '.layout', propiedad: 'display', valor: 'block' }]
+  },
+
+  // ── MEDIO ──────────────────────────────────────────────────
+  {
+    id: 'dis-layout-flex-medio',
+    titulo: 'Reto: Fila con display flex',
+    descripcion:
+      'Convierte el contenedor en flex para alinear los elementos en una sola fila.',
+    instruccion: 'Dale a .layout display: flex y gap: 12px.',
+    htmlBase: `<div class="layout">
+  <div class="item">A</div>
+  <div class="item">B</div>
+  <div class="item">C</div>
+</div>`,
+    cssBase: `.layout {
+  border: 2px dashed #adb5bd;
+  padding: 10px;
+  /* escribe aquí */
+}
+
+.item {
+  background: #e1f5ee;
+  border: 1px solid #5dcaa5;
+  padding: 10px 16px;
+}`,
+    reglas: [
+      { selector: '.layout', propiedad: 'display', valor: 'flex' },
+      { selector: '.layout', propiedad: 'gap', valor: '12px' }
+    ]
+  },
+
+  // ── MEDIO ──────────────────────────────────────────────────
+  {
+    id: 'dis-layout-grid-medio',
+    titulo: 'Reto: Cuadricula con display grid',
+    descripcion:
+      'Organiza los elementos en 3 columnas iguales usando grid.',
+    instruccion:
+      'Dale a .layout display: grid, grid-template-columns: repeat(3, 1fr) y gap: 10px.',
+    htmlBase: `<div class="layout">
+  <div class="item">1</div>
+  <div class="item">2</div>
+  <div class="item">3</div>
+  <div class="item">4</div>
+  <div class="item">5</div>
+  <div class="item">6</div>
+</div>`,
+    cssBase: `.layout {
+  border: 2px dashed #adb5bd;
+  padding: 10px;
+  /* escribe aquí */
+}
+
+.item {
+  background: #fff3bf;
+  border: 1px solid #fcc419;
+  padding: 12px;
+  text-align: center;
+}`,
+    reglas: [
+      { selector: '.layout', propiedad: 'display', valor: 'grid' },
+      { selector: '.layout', propiedad: 'grid-template-columns', valor: 'repeat(3, 1fr)' },
+      { selector: '.layout', propiedad: 'gap', valor: '10px' }
+    ]
+  },
+
+  // ── DIFÍCIL ────────────────────────────────────────────────
+  {
+    id: 'dis-inline-none-dificil',
+    titulo: 'Reto: Inline-block y ocultar con none',
+    descripcion:
+      'Combina dos valores de display: mostrar botones en linea y ocultar un item.',
+    instruccion:
+      'Dale a .chip display: inline-block. Dale a .chip.oculto display: none.',
+    htmlBase: `<div class="menu">
+  <span class="chip">Inicio</span>
+  <span class="chip oculto">Admin</span>
+  <span class="chip">Contacto</span>
+</div>`,
+    cssBase: `.menu {
+  padding: 8px;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+}
+
+.chip {
+  background: #f1f3f5;
+  padding: 8px 12px;
+  border-radius: 999px;
+  margin-right: 8px;
+  /* escribe aquí */
+}
+
+.chip.oculto {
+  /* escribe aquí */
+}`,
+    reglas: [
+      { selector: '.chip', propiedad: 'display', valor: 'inline-block' },
+      { selector: '.chip.oculto', propiedad: 'display', valor: 'none' }
     ]
   }
 ]
