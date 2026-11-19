@@ -18,7 +18,8 @@ html, body {
 img { max-width: 100%; }
 `
 
-export function renderPreview(container, { html = '', css = '', minHeight = 280, maxHeight = 960 } = {}) {
+// sinEstilos: true → no se aplica ni BASE_CSS, solo los estilos por defecto del navegador
+export function renderPreview(container, { html = '', css = '', sinEstilos = false, minHeight = 280, maxHeight = 960 } = {}) {
     let frame = container.querySelector('iframe[data-reto-preview]')
 
     if (!frame) {
@@ -56,7 +57,7 @@ export function renderPreview(container, { html = '', css = '', minHeight = 280,
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <base href="${baseHref}" />
-    <style>${BASE_CSS}</style>
+    <style>${sinEstilos ? '' : BASE_CSS}</style>
     <style>${css}</style>
 </head>
 <body>

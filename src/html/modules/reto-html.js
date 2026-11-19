@@ -26,7 +26,14 @@ class RetoHTML extends RetoBase {
     config = {
         lenguaje: 'html',
         tituloFijo: 'CSS fijo del reto (ya está hecho, no lo tocas)',
-        tituloEditor: 'Tu HTML (editable)'
+        tituloEditor: 'Tu HTML (editable)',
+        switchCss: true
+    }
+
+    // Con el interruptor apagado se ve el HTML "pelado", solo con los estilos
+    // por defecto del navegador: así se nota todo lo que aporta el CSS.
+    get cssActivo() {
+        return this.refs?.checkCss?.checked !== false
     }
 
     buscarReto(id) {
@@ -37,7 +44,11 @@ class RetoHTML extends RetoBase {
 
     codigoInicial(reto) { return reto.htmlBase }
     codigoFijo(reto) { return reto.cssBase }
-    armarPreview(reto, html) { return { html, css: reto.cssBase } }
+    armarPreview(reto, html) {
+        return this.cssActivo
+            ? { html, css: reto.cssBase }
+            : { html, css: '', sinEstilos: true }
+    }
     layoutApilado(reto) { return Boolean(reto.apilado) }
 
     async validar(reto, _html, doc) {

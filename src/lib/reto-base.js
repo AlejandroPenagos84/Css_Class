@@ -22,7 +22,7 @@ export class RetoBase extends HTMLElement {
     // config                    → { lenguaje, tituloFijo, tituloEditor }
     // codigoInicial(reto)       → texto inicial del editor
     // codigoFijo(reto)          → texto que se muestra como "fijo"
-    // armarPreview(reto, code)  → { html, css }
+    // armarPreview(reto, code)  → { html, css, sinEstilos? }
     // validar(reto, code, doc)  → { aprobado, resultados }
     // describir(resultado)      → texto de una línea del checklist
     // layoutApilado(reto)       → true si editor y preview van uno sobre otro
@@ -43,6 +43,18 @@ export class RetoBase extends HTMLElement {
 
         this.refs.tituloFijo.textContent = this.config.tituloFijo
         this.refs.tituloEditor.textContent = this.config.tituloEditor
+
+        // Interruptor "CSS activado": solo para los retos que lo piden (config.switchCss)
+        if (this.config.switchCss) {
+            this.refs.switchCss.hidden = false
+            this.refs.checkCss.addEventListener('change', () => {
+                const activo = this.refs.checkCss.checked
+                this.dataset.css = activo ? 'on' : 'off'
+                this.refs.switchCss.querySelector('.switch-texto').textContent =
+                    activo ? 'CSS activado' : 'CSS desactivado'
+                this.actualizarPreview()
+            })
+        }
 
         this.refs.btnEvaluar.addEventListener('click', () => this.evaluar())
         this.refs.btnReiniciar.addEventListener('click', () => {
