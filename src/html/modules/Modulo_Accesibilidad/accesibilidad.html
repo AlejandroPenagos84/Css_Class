@@ -1,0 +1,65 @@
+<template>
+    <div class="module-header">
+        <div class="module-tag">Accesibilidad</div>
+        <div class="module-title">Accesibilidad básica</div>
+        <div class="module-desc">Una página accesible la puede usar cualquiera: con lector de pantalla, solo
+            con el teclado, con baja visión o desde un celular viejo. La buena noticia: casi todo se logra
+            usando bien el HTML que ya aprendiste.</div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Los 5 hábitos que más importan</div>
+        <div class="explain-row">
+            <div class="num">1</div>
+            <div class="text"><strong>alt en todas las imágenes</strong> que aportan información
+                (<code>alt=""</code> si son decorativas).</div>
+        </div>
+        <div class="explain-row">
+            <div class="num">2</div>
+            <div class="text"><strong>Un label por campo</strong> de formulario. El placeholder no
+                cuenta: desaparece al escribir.</div>
+        </div>
+        <div class="explain-row">
+            <div class="num">3</div>
+            <div class="text"><strong>Encabezados en orden</strong>: un <code>h1</code>, luego
+                <code>h2</code>, <code>h3</code>… sin saltarse niveles. Mucha gente navega por encabezados.
+            </div>
+        </div>
+        <div class="explain-row">
+            <div class="num">4</div>
+            <div class="text"><strong>&lt;button&gt; para acciones</strong>, <code>&lt;a&gt;</code> para ir a
+                otro lugar. Un <code>&lt;div&gt;</code> con clic no se puede usar con teclado.</div>
+        </div>
+        <div class="explain-row">
+            <div class="num">5</div>
+            <div class="text"><strong>Textos de enlace con sentido</strong>: "descargar el programa", no
+                "clic aquí".</div>
+        </div>
+    </div>
+
+    <div class="section" data-demo="a11y">
+        <div class="section-title">Mal vs. bien — demo interactiva (usa la tecla Tab)</div>
+        <div class="demo-area">
+            <div class="demo-controls">
+                <div class="ctrl-label">Elige un ejemplo:</div>
+                <div class="btn-group" data-demo-btns></div>
+            </div>
+            <div class="demo-preview html-render" data-demo-preview></div>
+        </div>
+        <div class="code-block" data-demo-code></div>
+        <div class="info-box" data-demo-nota></div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">¿Y ARIA?</div>
+        <div class="info-box">Los atributos <code>aria-*</code> agregan información para lectores de pantalla
+            cuando el HTML no alcanza, por ejemplo <code>aria-label</code> en un botón que solo tiene un ícono.
+            Pero la primera regla de ARIA es: <strong>si existe una etiqueta HTML que lo hace, úsala en vez
+            de ARIA</strong>.</div>
+    </div>
+
+    <div class="tip-box">
+        <p>💡 <strong>Pruébalo tú:</strong> deja el mouse y recorre esta página solo con <kbd>Tab</kbd>,
+            <kbd>Shift+Tab</kbd> y <kbd>Enter</kbd>. Si algo no se puede usar así, no es accesible.</p>
+    </div>
+</template>

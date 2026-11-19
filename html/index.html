@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guía HTML Interactiva</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+
+  <div class="guide">
+
+    <div class="guide-header">
+      <a class="guide-switch" href="../">← Ir a la Guía CSS</a>
+      <h1>Guía HTML Interactiva</h1>
+      <p>Aprende a estructurar páginas web — con demos en vivo y retos donde escribes tu propio HTML.</p>
+    </div>
+
+    <!-- Navegación entre módulos (el orden debe coincidir con los .module de abajo) -->
+    <nav class="nav" id="mainNav">
+      <button class="nav-btn active" data-target="0">¿Qué es HTML?</button>
+      <button class="nav-btn" data-target="1">Listas</button>
+      <button class="nav-btn" data-target="2">Enlaces</button>
+      <button class="nav-btn" data-target="3">Imágenes</button>
+      <button class="nav-btn" data-target="4">Tablas</button>
+      <button class="nav-btn" data-target="5">Formularios</button>
+      <button class="nav-btn" data-target="6">Semántica</button>
+      <button class="nav-btn" data-target="7">Accesibilidad</button>
+    </nav>
+
+    <!-- ¿Qué es HTML? -->
+    <div class="module visible">
+      <intro-html></intro-html>
+      <reto-html reto-id="html-texto-basico"></reto-html>
+      <reto-html reto-id="html-anidado-medio"></reto-html>
+      <footer-module></footer-module>
+    </div>
+
+    <!-- Listas -->
+    <div class="module">
+      <listas-html></listas-html>
+      <reto-html reto-id="lista-ul-basico"></reto-html>
+      <reto-html reto-id="lista-receta-medio"></reto-html>
+      <reto-html reto-id="lista-anidada-dificil"></reto-html>
+      <footer-module></footer-module>
+    </div>
+
+    <!-- Enlaces -->
+    <div class="module">
+      <enlaces-html></enlaces-html>
+      <reto-html reto-id="enl-externo-basico"></reto-html>
+      <reto-html reto-id="enl-anclas-medio"></reto-html>
+      <reto-html reto-id="enl-contacto-medio"></reto-html>
+      <footer-module></footer-module>
+    </div>
+
+    <!-- Imágenes -->
+    <div class="module">
+      <imagenes-html></imagenes-html>
+      <reto-html reto-id="img-basico"></reto-html>
+      <reto-html reto-id="img-figure-medio"></reto-html>
+      <reto-html reto-id="img-enlace-medio"></reto-html>
+      <reto-html reto-id="img-galeria-dificil"></reto-html>
+      <footer-module></footer-module>
+    </div>
+
+    <!-- Tablas -->
+    <div class="module">
+      <tablas-html></tablas-html>
+      <reto-html reto-id="tabla-basica"></reto-html>
+      <reto-html reto-id="tabla-estructura-medio"></reto-html>
+      <reto-html reto-id="tabla-horario-dificil"></reto-html>
+      <footer-module></footer-module>
+    </div>
+
+    <!-- Formularios -->
+    <div class="module">
+      <formularios-html></formularios-html>
+      <reto-html reto-id="form-login-basico"></reto-html>
+      <reto-html reto-id="form-pedido-medio"></reto-html>
+      <reto-html reto-id="form-registro-dificil"></reto-html>
+      <footer-module></footer-module>
+    </div>
+
+    <!-- Semántica -->
+    <div class="module">
+      <semantica-html></semantica-html>
+      <reto-html reto-id="sem-estructura-basico"></reto-html>
+      <reto-html reto-id="sem-articulo-medio"></reto-html>
+      <reto-html reto-id="sem-refactor-dificil"></reto-html>
+      <footer-module></footer-module>
+    </div>
+
+    <!-- Accesibilidad -->
+    <div class="module">
+      <accesibilidad-html></accesibilidad-html>
+      <reto-html reto-id="a11y-alt-label-basico"></reto-html>
+      <reto-html reto-id="a11y-encabezados-medio"></reto-html>
+      <reto-html reto-id="a11y-teclado-dificil"></reto-html>
+      <footer-module></footer-module>
+    </div>
+
+  </div>
+
+  <script type="module" src="/src/html/main.js"></script>
+</body>
+
+</html>

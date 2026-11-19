@@ -1,0 +1,64 @@
+<template>
+    <div class="module-header">
+        <div class="module-tag">Enlaces</div>
+        <div class="module-title">Enlaces: la "H" de HTML</div>
+        <div class="module-desc">HyperText significa texto que enlaza a otros textos. La etiqueta
+            <code>&lt;a&gt;</code> (anchor, ancla) es lo que convierte un documento en la web.</div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">¿A dónde puede llevar un href?</div>
+        <div class="concept-grid">
+            <div class="concept-card">
+                <div class="label">URL absoluta</div>
+                <div class="desc"><code>https://developer.mozilla.org</code> — otro sitio web.</div>
+            </div>
+            <div class="concept-card">
+                <div class="label">Ruta relativa</div>
+                <div class="desc"><code>contacto.html</code>, <code>../index.html</code> — otra página de tu
+                    sitio.</div>
+            </div>
+            <div class="concept-card">
+                <div class="label">Ancla #id</div>
+                <div class="desc"><code>#precios</code> — salta al elemento con <code>id="precios"</code> en la
+                    misma página.</div>
+            </div>
+            <div class="concept-card">
+                <div class="label">mailto: / tel:</div>
+                <div class="desc">Abren el correo o el marcador del teléfono.</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section" data-demo="enlaces">
+        <div class="section-title">Enlaces — demo interactiva (puedes hacer clic)</div>
+        <div class="demo-area">
+            <div class="demo-controls">
+                <div class="ctrl-label">Elige un ejemplo:</div>
+                <div class="btn-group" data-demo-btns></div>
+            </div>
+            <div class="demo-preview html-render" data-demo-preview></div>
+        </div>
+        <div class="code-block" data-demo-code></div>
+        <div class="info-box" data-demo-nota></div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Buenas prácticas</div>
+        <div class="explain-row">
+            <div class="num">1</div>
+            <div class="text">El texto del enlace dice a dónde lleva. ❌ "haz clic aquí" ✅ "lee la guía de
+                instalación".</div>
+        </div>
+        <div class="explain-row">
+            <div class="num">2</div>
+            <div class="text">Si usas <code>target="_blank"</code>, agrega <code>rel="noopener"</code> por
+                seguridad.</div>
+        </div>
+        <div class="explain-row">
+            <div class="num">3</div>
+            <div class="text">Un enlace <em>lleva a otro lugar</em>; un botón <em>hace una acción</em>. No uses
+                <code>&lt;a&gt;</code> para lo que debería ser un <code>&lt;button&gt;</code>.</div>
+        </div>
+    </div>
+</template>

@@ -1,0 +1,46 @@
+<template>
+    <div class="module-header">
+        <div class="module-tag">Listas</div>
+        <div class="module-title">Listas en HTML</div>
+        <div class="module-desc">Las listas agrupan elementos relacionados. Están en todas partes: menús de
+            navegación, pasos de una receta, resultados de búsqueda, galerías…</div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Los tres tipos de lista</div>
+        <div class="concept-grid">
+            <div class="concept-card">
+                <div class="label">&lt;ul&gt; desordenada</div>
+                <div class="desc">El orden no importa. Se muestra con viñetas. Ej: ingredientes.</div>
+            </div>
+            <div class="concept-card">
+                <div class="label">&lt;ol&gt; ordenada</div>
+                <div class="desc">El orden sí importa. Se muestra con números. Ej: pasos de una receta.</div>
+            </div>
+            <div class="concept-card">
+                <div class="label">&lt;dl&gt; de descripción</div>
+                <div class="desc">Pares término (<code>&lt;dt&gt;</code>) – definición (<code>&lt;dd&gt;</code>).
+                    Ej: un glosario.</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section" data-demo="listas">
+        <div class="section-title">Listas — demo interactiva</div>
+        <div class="demo-area">
+            <div class="demo-controls">
+                <div class="ctrl-label">Elige un ejemplo:</div>
+                <div class="btn-group" data-demo-btns></div>
+            </div>
+            <div class="demo-preview html-render" data-demo-preview></div>
+        </div>
+        <div class="code-block" data-demo-code></div>
+        <div class="info-box" data-demo-nota></div>
+    </div>
+
+    <div class="tip-box">
+        <p>💡 <strong>Regla:</strong> los hijos directos de <code>&lt;ul&gt;</code> y <code>&lt;ol&gt;</code>
+            solo pueden ser <code>&lt;li&gt;</code>. Si quieres una sublista, va <em>dentro</em> de un
+            <code>&lt;li&gt;</code>, nunca suelta dentro del <code>&lt;ul&gt;</code>.</p>
+    </div>
+</template>

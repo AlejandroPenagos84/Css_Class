@@ -1,0 +1,101 @@
+<template>
+    <div class="module-header">
+        <div class="module-tag">Imágenes</div>
+        <div class="module-title">Imágenes en HTML</div>
+        <div class="module-desc">La etiqueta <code>&lt;img&gt;</code> inserta una imagen. No tiene cierre: todo lo que
+            necesita va en sus atributos.</div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Los atributos que importan</div>
+        <div class="concept-grid">
+            <div class="concept-card">
+                <div class="label">src</div>
+                <div class="desc">La ruta de la imagen. Relativa (<code>img/gato.svg</code>) o absoluta
+                    (<code>https://...</code>).</div>
+            </div>
+            <div class="concept-card">
+                <div class="label">alt</div>
+                <div class="desc">Describe la imagen. Lo leen los lectores de pantalla y aparece si la imagen
+                    no carga. <strong>Siempre</strong> va.</div>
+            </div>
+            <div class="concept-card">
+                <div class="label">width / height</div>
+                <div class="desc">Tamaño en píxeles, sin "px". Ayudan a que la página no "salte" mientras
+                    carga.</div>
+            </div>
+            <div class="concept-card">
+                <div class="label">loading="lazy"</div>
+                <div class="desc">La imagen se descarga solo cuando está por aparecer en pantalla.</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Atributos de &lt;img&gt; — demo interactiva</div>
+        <div class="demo-area">
+            <div class="demo-controls">
+                <div class="controls-grid">
+                    <div>
+                        <div class="ctrl-label">src</div>
+                        <div class="btn-group" data-img-prop="src">
+                            <button class="ctrl-btn sel" data-value="img/gato.svg">gato.svg</button>
+                            <button class="ctrl-btn" data-value="img/paisaje.svg">paisaje.svg</button>
+                            <button class="ctrl-btn" data-value="img/gatto.svg">gatto.svg (ruta rota)</button>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="ctrl-label">alt</div>
+                        <div class="btn-group" data-img-prop="alt">
+                            <button class="ctrl-btn sel" data-value="Gato naranja sonriendo">con alt</button>
+                            <button class="ctrl-btn" data-value="">sin alt</button>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="ctrl-label">width</div>
+                        <div class="btn-group" data-img-prop="width">
+                            <button class="ctrl-btn" data-value="100">100</button>
+                            <button class="ctrl-btn sel" data-value="200">200</button>
+                            <button class="ctrl-btn" data-value="300">300</button>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="ctrl-label">envolver en</div>
+                        <div class="btn-group" data-img-prop="envoltura">
+                            <button class="ctrl-btn sel" data-value="">nada</button>
+                            <button class="ctrl-btn" data-value="figure">figure + figcaption</button>
+                            <button class="ctrl-btn" data-value="a">a (enlace)</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="demo-preview html-render" id="imgPreview"></div>
+        </div>
+        <div class="code-block" id="imgCode"></div>
+        <div class="info-box" id="imgNota"></div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">¿Cómo escribo un buen alt?</div>
+        <div class="concept-grid">
+            <div class="concept-card">
+                <div class="label">❌ alt="imagen"</div>
+                <div class="desc">No dice nada. El lector de pantalla ya sabe que es una imagen.</div>
+            </div>
+            <div class="concept-card">
+                <div class="label">✅ alt="Gato naranja sonriendo"</div>
+                <div class="desc">Describe lo que se ve, como se lo contarías a alguien por teléfono.</div>
+            </div>
+            <div class="concept-card">
+                <div class="label">alt="" (vacío)</div>
+                <div class="desc">Solo para imágenes decorativas, que no aportan información.</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tip-box">
+        <p>💡 <strong>Tip:</strong> el tamaño final de una imagen se controla mejor con CSS. Los atributos
+            <code>width</code> y <code>height</code> en el HTML sirven sobre todo para reservar el espacio
+            mientras carga.</p>
+    </div>
+</template>

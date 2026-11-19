@@ -1,0 +1,67 @@
+<template>
+    <div class="module-header">
+        <div class="module-tag">Semántica</div>
+        <div class="module-title">HTML semántico</div>
+        <div class="module-desc">Un <code>&lt;div&gt;</code> no dice nada de su contenido. Las etiquetas
+            semánticas sí: "esto es la navegación", "esto es el contenido principal". Lo entienden los
+            buscadores, los lectores de pantalla y tus compañeros de equipo.</div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">El mapa de una página</div>
+        <div class="semantica-mapa">
+            <div class="sm-header">&lt;header&gt; logo, título
+                <div class="sm-nav">&lt;nav&gt; menú principal</div>
+            </div>
+            <div class="sm-cuerpo">
+                <div class="sm-main">&lt;main&gt; contenido único de la página
+                    <div class="sm-article">&lt;article&gt; contenido independiente (un post, una noticia)
+                        <div class="sm-section">&lt;section&gt; parte con su propio título</div>
+                    </div>
+                </div>
+                <div class="sm-aside">&lt;aside&gt; contenido relacionado</div>
+            </div>
+            <div class="sm-footer">&lt;footer&gt; créditos, contacto, enlaces legales</div>
+        </div>
+    </div>
+
+    <div class="section" data-demo="semantica">
+        <div class="section-title">div vs. etiqueta semántica — compara</div>
+        <div class="demo-area">
+            <div class="demo-controls">
+                <div class="ctrl-label">Elige un ejemplo:</div>
+                <div class="btn-group" data-demo-btns></div>
+            </div>
+            <div class="demo-preview html-render" data-demo-preview></div>
+        </div>
+        <div class="code-block" data-demo-code></div>
+        <div class="info-box" data-demo-nota></div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">¿article o section?</div>
+        <div class="concept-grid">
+            <div class="concept-card">
+                <div class="label">&lt;article&gt;</div>
+                <div class="desc">¿Tendría sentido solo, copiado en otro sitio? Una noticia, un comentario, una
+                    tarjeta de producto.</div>
+            </div>
+            <div class="concept-card">
+                <div class="label">&lt;section&gt;</div>
+                <div class="desc">Una parte temática de algo más grande, casi siempre con su propio
+                    encabezado.</div>
+            </div>
+            <div class="concept-card">
+                <div class="label">&lt;div&gt;</div>
+                <div class="desc">Cuando ninguna otra encaja y solo lo necesitas para dar estilo. Es válido,
+                    pero es el último recurso.</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tip-box">
+        <p>💡 <strong>Regla:</strong> solo un <code>&lt;main&gt;</code> por página. <code>&lt;header&gt;</code> y
+            <code>&lt;footer&gt;</code> pueden repetirse: un <code>&lt;article&gt;</code> puede tener su propio
+            header con título y fecha.</p>
+    </div>
+</template>

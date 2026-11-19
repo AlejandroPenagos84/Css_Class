@@ -1,0 +1,76 @@
+<template>
+    <div class="module-header">
+        <div class="module-tag">¿Qué es HTML?</div>
+        <div class="module-title">¿Qué es HTML y cómo funciona?</div>
+        <div class="module-desc">HTML (HyperText Markup Language) describe la <strong>estructura y el
+            significado</strong> del contenido: esto es un título, esto un párrafo, esto una imagen. El CSS
+            después decide cómo se ve.</div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Anatomía de un elemento</div>
+        <div class="code-block"><span class="hl-comment">&lt;!-- etiqueta de apertura · contenido · etiqueta de cierre --&gt;</span>
+&lt;<span class="hl-selector">a</span> <span class="hl-prop">href</span>=<span class="hl-val">"https://mdn.dev"</span>&gt;Ir a MDN&lt;/<span class="hl-selector">a</span>&gt;</div>
+        <div class="explain-row">
+            <div class="num">1</div>
+            <div class="text"><strong>Etiqueta</strong>: el nombre del elemento (<code>a</code>, <code>p</code>,
+                <code>img</code>). Se abre con <code>&lt;a&gt;</code> y se cierra con <code>&lt;/a&gt;</code>.</div>
+        </div>
+        <div class="explain-row">
+            <div class="num">2</div>
+            <div class="text"><strong>Atributo</strong>: información extra, siempre en la apertura:
+                <code>nombre="valor"</code>.</div>
+        </div>
+        <div class="explain-row">
+            <div class="num">3</div>
+            <div class="text"><strong>Contenido</strong>: lo que va entre apertura y cierre. Puede ser texto u
+                otros elementos (anidados).</div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Estructura básica de un documento</div>
+        <div class="code-block" data-codigo-estructura></div>
+        <div class="concept-grid">
+            <div class="concept-card">
+                <div class="label">&lt;head&gt;</div>
+                <div class="desc">Lo que <strong>no</strong> se ve: título de la pestaña, codificación, enlaces
+                    al CSS.</div>
+            </div>
+            <div class="concept-card">
+                <div class="label">&lt;body&gt;</div>
+                <div class="desc">Todo lo que <strong>sí</strong> se ve en la página.</div>
+            </div>
+            <div class="concept-card">
+                <div class="label">lang="es"</div>
+                <div class="desc">Le dice al navegador y a los lectores de pantalla en qué idioma está.</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Etiquetas de texto — demo interactiva</div>
+        <div class="demo-area">
+            <div class="demo-controls">
+                <div class="ctrl-label">Elige un grupo de etiquetas:</div>
+                <div class="btn-group" id="etiquetaBtns">
+                    <button class="ctrl-btn sel" data-etiqueta="encabezados">h1 – h6</button>
+                    <button class="ctrl-btn" data-etiqueta="parrafo">p</button>
+                    <button class="ctrl-btn" data-etiqueta="enfasis">strong / em</button>
+                    <button class="ctrl-btn" data-etiqueta="enlace">a</button>
+                    <button class="ctrl-btn" data-etiqueta="listas">ul / ol / li</button>
+                    <button class="ctrl-btn" data-etiqueta="otras">br / hr / code / mark</button>
+                </div>
+            </div>
+            <div class="demo-preview html-render" id="etiquetaPreview"></div>
+        </div>
+        <div class="code-block" id="etiquetaCode"></div>
+        <div class="info-box" id="etiquetaNota"></div>
+    </div>
+
+    <div class="tip-box">
+        <p>💡 <strong>Regla de oro:</strong> elige la etiqueta por lo que <em>significa</em>, no por cómo se
+            ve. ¿Quieres un texto grande? Eso es CSS. ¿Es el título de la sección? Eso es un
+            <code>&lt;h2&gt;</code>.</p>
+    </div>
+</template>

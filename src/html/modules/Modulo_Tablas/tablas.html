@@ -1,0 +1,51 @@
+<template>
+    <div class="module-header">
+        <div class="module-tag">Tablas</div>
+        <div class="module-title">Tablas en HTML</div>
+        <div class="module-desc">Las tablas son para <strong>datos tabulares</strong>: información que tiene
+            filas y columnas, como un horario o una lista de precios. Nunca para maquetar la página (para eso
+            está CSS Grid y Flexbox).</div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Las piezas de una tabla</div>
+        <div class="code-block" data-codigo-tabla></div>
+        <div class="concept-grid">
+            <div class="concept-card">
+                <div class="label">&lt;tr&gt;</div>
+                <div class="desc">Table row: una fila. Las celdas siempre van dentro de una fila.</div>
+            </div>
+            <div class="concept-card">
+                <div class="label">&lt;th&gt; vs &lt;td&gt;</div>
+                <div class="desc"><code>th</code> es una celda de encabezado; <code>td</code> una celda de
+                    datos.</div>
+            </div>
+            <div class="concept-card">
+                <div class="label">thead / tbody / tfoot</div>
+                <div class="desc">Agrupan las filas de encabezado, de datos y de totales.</div>
+            </div>
+            <div class="concept-card">
+                <div class="label">&lt;caption&gt;</div>
+                <div class="desc">El título de la tabla. Va justo después de <code>&lt;table&gt;</code>.</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section" data-demo="tablas">
+        <div class="section-title">Tablas — demo interactiva</div>
+        <div class="demo-area">
+            <div class="demo-controls">
+                <div class="ctrl-label">Elige un ejemplo:</div>
+                <div class="btn-group" data-demo-btns></div>
+            </div>
+            <div class="demo-preview html-render" data-demo-preview></div>
+        </div>
+        <div class="code-block" data-demo-code></div>
+        <div class="info-box" data-demo-nota></div>
+    </div>
+
+    <div class="tip-box">
+        <p>💡 <strong>Tip:</strong> en las demos agregamos un borde gris para que veas las celdas. Por defecto
+            una tabla no tiene bordes: eso se lo das con CSS.</p>
+    </div>
+</template>

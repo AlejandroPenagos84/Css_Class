@@ -1,0 +1,51 @@
+/* Estilos propios de la guía HTML (el resto viene de /styles.css) */
+
+/* El reset global (* { margin:0; padding:0 }) borra los estilos por defecto
+   del navegador. En las demos queremos ver cómo se ve el HTML "puro". */
+.html-render * {
+  margin: revert;
+  padding: revert;
+}
+
+.html-render img { max-width: 100%; height: auto; }
+
+/* Las tablas no tienen bordes por defecto; se los damos en las demos
+   para que se vean las celdas (el tip del módulo lo explica). */
+.html-render table { border-collapse: collapse; }
+.html-render th,
+.html-render td { border: 1px solid #ccc; padding: 6px 10px; }
+
+.html-render :focus-visible { outline: 3px solid #f39c12; outline-offset: 2px; }
+
+kbd {
+  font-family: monospace;
+  font-size: 12px;
+  padding: 1px 6px;
+  border: 1px solid #bbb;
+  border-bottom-width: 2px;
+  border-radius: 4px;
+  background: #fff;
+}
+
+/* Mapa visual del módulo de Semántica */
+.semantica-mapa {
+  display: grid;
+  gap: 8px;
+  font-family: monospace;
+  font-size: 13px;
+}
+.semantica-mapa > div,
+.semantica-mapa .sm-cuerpo > div,
+.semantica-mapa div div { border-radius: 8px; padding: 10px 12px; }
+.sm-header { background: #9FE1CB; color: #085041; }
+.sm-nav { background: #085041; color: #E1F5EE; margin-top: 8px; }
+.sm-cuerpo { display: grid; grid-template-columns: 3fr 1fr; gap: 8px; padding: 0 !important; }
+.sm-main { background: #B5D4F4; color: #0C447C; }
+.sm-article { background: #fff; border: 1px dashed #0C447C; margin-top: 8px; }
+.sm-section { background: #E8F0FB; margin-top: 8px; }
+.sm-aside { background: #FAC775; color: #412402; }
+.sm-footer { background: #444; color: #eee; }
+
+@media (max-width: 600px) {
+  .sm-cuerpo { grid-template-columns: 1fr; }
+}

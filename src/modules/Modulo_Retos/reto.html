@@ -1,37 +1,36 @@
 <template>
     <div class="module-header">
         <div class="module-tag">Retos</div>
-        <div class="module-title" id="retoTitulo"></div>
-        <div class="module-desc" id="retoDescripcion"></div>
+        <div class="module-title" data-ref="titulo"></div>
+        <div class="module-desc" data-ref="descripcion"></div>
     </div>
 
     <div class="tip-box">
-        <p><strong>Objetivo:</strong> <span id="retoInstruccion"></span></p>
+        <p><strong>Objetivo:</strong> <span data-ref="instruccion"></span></p>
     </div>
 
     <div class="section">
-        <div class="section-title">HTML fijo del reto</div>
-        <div id="baseHtmlCode" class="code-block"></div>
+        <div class="section-title" data-ref="tituloFijo">Código fijo del reto</div>
+        <div class="code-block" data-ref="codigoFijo"></div>
     </div>
 
     <div class="container-retos">
         <div class="section">
-            <div class="section-title">Tu CSS (editable)</div>
-            <div id="editor" style="height: 300px; width: 100%; border: 1px solid #eee; border-radius: 8px;"></div>
-            <div style="margin-top: 10px; display: flex; gap: 8px; align-items: center;">
-                <button id="btnEvaluar" class="ctrl-btn">Evaluar reto</button>
-                <span id="resultadoReto" style="font-size: 13px; color: #555;"></span>
+            <div class="section-title" data-ref="tituloEditor">Tu código (editable)</div>
+            <div class="reto-editor" data-ref="editor"></div>
+            <div class="reto-acciones">
+                <button class="ctrl-btn" data-ref="btnEvaluar">Evaluar reto</button>
+                <button class="ctrl-btn" data-ref="btnReiniciar">Reiniciar</button>
+                <span class="reto-estado" data-ref="estado"></span>
             </div>
+            <ul class="reto-checklist" data-ref="checklist"></ul>
         </div>
 
         <div class="section">
-            <div class="section-title">Preview en vivo</div>
+            <div class="section-title">Vista previa en vivo</div>
             <div class="demo-area">
-                <div class="demo-preview" id="challengePreview"></div>
+                <div class="demo-preview reto-preview" data-ref="preview"></div>
             </div>
         </div>
     </div>
-
-
-
 </template>
